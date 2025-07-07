@@ -1,0 +1,7 @@
+.venv
+.env
+__pycache__
+run.sh
+/keys
+*.json
+deploy-azr.yml
