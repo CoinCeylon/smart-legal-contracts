@@ -149,10 +149,10 @@ def pull_the_data_from_blockfrost_api(adderss: str):
     transaction = api.address(address=adderss)
     transaction = namespace_to_dict(transaction)
 
-    output += f"Address: {transaction["address"]}\n"
-    output += f"Stake Address: {transaction["stake_address"]}\n"
-    output += f"Script: {transaction["script"]}\n"
-    output += f"Current amount: {int(transaction["amount"][0]["quantity"])/1000000} ADA\n"
+    output += f"Address: {transaction['address']}\n"
+    output += f"Stake Address: {transaction['stake_address']}\n"
+    output += f"Script: {transaction['script']}\n"
+    output += f"Current amount: {int(transaction['amount'][0]['quantity'])/1000000} ADA\n"
 
     return output
 

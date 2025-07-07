@@ -66,10 +66,10 @@ if __name__ == "__main__":
     output = ''
     response = namespace_to_dict(response)
 
-    output += f"Address: {response["address"]}\n"
-    output += f"Stake Address: {response["stake_address"]}\n"
-    output += f"Script: {response["script"]}\n"
-    output += f"Current amount: {int(response["amount"][0]["quantity"])/1000000} ADA\n"
+    output += f"Address: {response['address']}\n"
+    output += f"Stake Address: {response['stake_address']}\n"
+    output += f"Script: {response['script']}\n"
+    output += f"Current amount: {int(response['amount'][0]['quantity'])/1000000} ADA\n"
 
     print(output)
     
