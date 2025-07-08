@@ -74,7 +74,7 @@ The user interface is clean, responsive, and intuitive. Features include:
 - Dynamic contract templates
 - AI-assistance embedded in the UI
 
-➡️ [Explore the Lawra Frontend](./slcmp_frontend/README.md)
+➡️ [Explore the Lawra Frontend](.frontend/README.md)
 
 ---
 
@@ -92,7 +92,7 @@ This backend system:
 - Handles blockchain document verification & digital signatures
 - Ensures full contract lifecycle security
 
-➡️ [Explore the Lawra Backend](./unihack25-backend/README.md)
+➡️ [Explore the Lawra Backend](./backend/README.md)
 
 ---
 
@@ -122,6 +122,6 @@ Organized by **CoinCeylon** and **FCT, University of Kelaniya**, UniHack 2025 em
 ---
 
 <p align="center">
-<img src="https://via.placeholder.com/150x50/40C4FF/FFFFFF?text=LawraLogo" alt="Lawra Logo" width="150"/><br>
+<img src="./frontend/src/assets/logo.png" alt="Lawra Logo" width="150"/><br>
 Built with passion for a transparent and trusted legal future.
 </p>
