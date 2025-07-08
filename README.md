@@ -1,10 +1,15 @@
-# 📋 Lawra - AI-Powered Legal Contract Management Platform
+# 📋 Lawra: AI-Powered Legal Contract Management Platform on Cardano Blockchain
 
 <div align="center">
 
 ![Lawra Logo](https://img.shields.io/badge/Lawra-Legal%20Contract%20Platform-blue?style=for-the-badge)
 
-**Streamline your legal workflow with blockchain security, AI assistance, and multi-signature capabilities**
+# 🚀 Welcome to Lawra
+
+**The World's First AI-Powered Legal Contract Platform Built on Cardano**
+Streamline your legal workflow with blockchain security, AI assistance, and multi-signature capabilities
+
+> _"Revolutionizing legal contracts through decentralized trust, intelligent automation, and immutable security. Powered by Cardano. Driven by AI. Designed for the future of law."_
 
 <p align="center">
 <a href="https://github.com/your-org/Lawra/blob/main/LICENSE">
@@ -56,7 +61,7 @@ This system acts as the intelligent brain of Lawra. It provides:
 - Smart contract generation and AI-driven document review
 - Integration with Cardano blockchain data
 
-➡️ [Explore the AI Legal & Cardano Assistant System](./mcp/TESTING.md)
+➡️ [Explore the AI Legal & Cardano Assistant System : Quick Start & Setup Guide](.mcp/README.md)
 
 ---
 
@@ -74,7 +79,7 @@ The user interface is clean, responsive, and intuitive. Features include:
 - Dynamic contract templates
 - AI-assistance embedded in the UI
 
-➡️ [Explore the Lawra Frontend](.frontend/README.md)
+➡️ [Lawra Frontend: Quick Start & Setup Guide](./frontend/README.md)
 
 ---
 
@@ -92,7 +97,7 @@ This backend system:
 - Handles blockchain document verification & digital signatures
 - Ensures full contract lifecycle security
 
-➡️ [Explore the Lawra Backend](./backend/README.md)
+➡️ [Lawra Backend: Quick Start & Setup Guide](./backend/README.md)
 
 ---
 
