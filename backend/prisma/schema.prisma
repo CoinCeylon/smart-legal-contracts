@@ -1,0 +1,69 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model - represents both contract creators and signers
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String?
+  walletAddress String?
+  initialTransactionHash String? @unique
+  enabled   Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relationships
+  createdContracts Contract[] @relation("ContractCreator")
+  contractSigners  ContractSigner[]
+
+  @@map("users")
+}
+
+model Contract {
+  id              Int      @id @default(autoincrement())
+  name            String
+  description     String?
+  type            String
+  document        Bytes    // BLOB storage for document
+  transactionHash String   @unique
+  createdBy       Int      // Foreign key to the user who created the contract
+  status          String   @default("draft") // e.g., 'draft', 'active', 'completed', 'cancelled'
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relationships
+  creator  User             @relation("ContractCreator", fields: [createdBy], references: [id], onDelete: Cascade)
+  signers  ContractSigner[]
+
+  @@map("contracts")
+}
+
+model ContractSigner {
+  id                    Int      @id @default(autoincrement())
+  contractId            Int
+  userId                Int
+  status                String   @default("pending") // e.g., 'pending', 'signed', 'rejected'
+  signedAt              DateTime?
+  parentTransactionHash String?  @unique
+  transactionHash       String?  @unique
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  // Relationships
+  contract Contract @relation(fields: [contractId], references: [id], onDelete: Cascade)
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Ensure a user can only be assigned once per contract
+  @@unique([contractId, userId])
+  @@map("contract_signers")
+}
