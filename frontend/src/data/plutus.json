@@ -1,0 +1,110 @@
+{
+  "preamble": {
+    "title": "shehan/legal",
+    "description": "Aiken contracts for project 'shehan/legal'",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.17+c3a7fba"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "placeholder.legal_contract.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/placeholder~1ContractDatum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/placeholder~1ContractRedeemer"
+        }
+      },
+      "compiledCode": "59018701010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea8016264646644b300130110038acc004cdc3a4000601a6ea80162646464653001375c6028602a0032232330010010032259800800c528456600266e3cdd7180c000801c528c4cc008008c064005014202e9180a980b000cdd7180a00224444b30013371e6eb8c060c058dd5008a4410d7369676e5f636f6e7472616374008acc004cc00cdd6180c0039bae300230163754023159800cc004cc00cdd6180c0031bae3002301637540234a14a280a22b3001330033758603060326032603260326032603260326032602c6ea8c06004cdd71801180b1baa011899b8948008dd6980c002c52820288a50405114a080a229410140c050004c04c004c048004c038dd5180818071baa0058b20188b201e375c601c0026eb8c038008c038004c028dd5002c5900818050009805180580098039baa0018b200a30070013007300800130070013003375400f149a26cac80081",
+      "hash": "994eeb8aa68895c5d374e694c041a7920199b7e9f19a317ea40568d0"
+    },
+    {
+      "title": "placeholder.legal_contract.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "59018701010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea8016264646644b300130110038acc004cdc3a4000601a6ea80162646464653001375c6028602a0032232330010010032259800800c528456600266e3cdd7180c000801c528c4cc008008c064005014202e9180a980b000cdd7180a00224444b30013371e6eb8c060c058dd5008a4410d7369676e5f636f6e7472616374008acc004cc00cdd6180c0039bae300230163754023159800cc004cc00cdd6180c0031bae3002301637540234a14a280a22b3001330033758603060326032603260326032603260326032602c6ea8c06004cdd71801180b1baa011899b8948008dd6980c002c52820288a50405114a080a229410140c050004c04c004c048004c038dd5180818071baa0058b20188b201e375c601c0026eb8c038008c038004c028dd5002c5900818050009805180580098039baa0018b200a30070013007300800130070013003375400f149a26cac80081",
+      "hash": "994eeb8aa68895c5d374e694c041a7920199b7e9f19a317ea40568d0"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "List$aiken/crypto/VerificationKeyHash": {
+      "dataType": "list",
+      "items": {
+        "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+      }
+    },
+    "aiken/crypto/VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
+    },
+    "placeholder/ContractDatum": {
+      "title": "ContractDatum",
+      "anyOf": [
+        {
+          "title": "ContractDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "document_hash",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "required_signers",
+              "$ref": "#/definitions/List$aiken~1crypto~1VerificationKeyHash"
+            },
+            {
+              "title": "signatures_collected",
+              "$ref": "#/definitions/List$aiken~1crypto~1VerificationKeyHash"
+            },
+            {
+              "title": "threshold",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "contract_creator",
+              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+            }
+          ]
+        }
+      ]
+    },
+    "placeholder/ContractRedeemer": {
+      "title": "ContractRedeemer",
+      "anyOf": [
+        {
+          "title": "ContractRedeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "action",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "signer",
+              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
