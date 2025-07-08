@@ -2,7 +2,7 @@ name: Build and Deploy to Azure
 
 on:
   push:
-    branches: [frontend]
+    branches: [backend]
   workflow_dispatch:
 
 env:
@@ -30,7 +30,7 @@ jobs:
 
       - name: Create .env File with Secrets
         run: |
-          cd frontend
+          cd backend
           echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
           echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
           echo "SMTP_HOST=${{ secrets.SMTP_HOST }}" >> .env
@@ -41,7 +41,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          cd frontend
+          cd backend
           IMAGE_TAG=${{ env.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.sha }}
           docker build -t $IMAGE_TAG .
           docker push $IMAGE_TAG
