@@ -11,7 +11,8 @@ Streamline your legal workflow with blockchain security, AI assistance, and mult
 
 ## Demo Video
 
-<a href="https:https://youtu.be/bvhC9JpJ8U8"> Video Link </a>
+<a href="https://youtu.be/bvhC9JpJ8U8"> Video Link </a>
+🎥 [Watch the Introduction Video](https://youtu.be/bvhC9JpJ8U8)
 
 > _"Revolutionizing legal contracts through decentralized trust, intelligent automation, and immutable security. Powered by Cardano. Driven by AI. Designed for the future of law."_
 
