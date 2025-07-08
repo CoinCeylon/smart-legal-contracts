@@ -61,7 +61,7 @@ This system acts as the intelligent brain of Lawra. It provides:
 - Smart contract generation and AI-driven document review
 - Integration with Cardano blockchain data
 
-➡️ [Explore the AI Legal & Cardano Assistant System : Quick Start & Setup Guide](.mcp/README.md)
+➡️ [Explore the AI Legal & Cardano Assistant System : Quick Start & Setup Guide](./mcp/README.md)
 
 ---
 
