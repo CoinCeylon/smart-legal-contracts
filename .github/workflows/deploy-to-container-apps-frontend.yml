@@ -30,14 +30,14 @@ jobs:
 
       - name: Create .env File with Secrets
         run: |
-          cd main
+          cd frontend
           echo "VITE_API_BLOCKFROST_API_KEY=${{ secrets.VITE_API_BLOCKFROST_API_KEY }}" >> .env
           echo "VITE_API_APP_BACKEND_URL=${{ secrets.VITE_API_APP_BACKEND_URL }}" >> .env
           echo ".env file created successfully."
 
       - name: Build and Push Docker Image
         run: |
-          cd main
+          cd frontend
           IMAGE_TAG=${{ env.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.sha }}
           docker build -t $IMAGE_TAG .
           docker push $IMAGE_TAG
